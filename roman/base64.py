@@ -22,25 +22,25 @@ def encode(to_encode):
     :return: The string encoded
     """
     chars = _get_chars(to_encode)
-    _check(chars)
+    # _check(chars)
     chars = _get_chars_ascii(chars)
-    _check(chars)
+    # _check(chars)
     chars = _convert_decimals_to_binary(chars)
-    _check(chars)
+    # _check(chars)
     binary = _join_array(chars)
-    _check(binary)
+    # _check(binary)
     chars = _binary_to_list_of_n_bytes(binary, 6)
-    _check(chars)
+    # _check(chars)
     _format_binaries_block_of_6_binaries(chars)
-    _check(chars)
+    # _check(chars)
     chars = _convert_binaries_to_decimal(chars)
-    _check(chars)
+    # _check(chars)
     chars = _convert_decimals_to_base64(chars)
-    _check(chars)
+    # _check(chars)
     to_encode = _join_array(chars)
-    _check(to_encode)
+    # _check(to_encode)
     to_encode = _format_base64(to_encode)
-    _check(to_encode)
+    # _check(to_encode)
     return to_encode
 
 
@@ -50,20 +50,20 @@ def decode(to_decode):
 
     :param to_decode: The string to decode
     """
-    to_decode = _format_base64(to_decode)
+    # to_decode = _format_base64(to_decode)
     chars = _convert_base64_to_decimals(to_decode)
-    _check(chars)
+    # _check(chars)
     chars = _convert_decimals_to_binary(chars, False)
-    _check(chars)
+    # _check(chars)
     _format_binaries_block_to_remove_last_0(chars)
-    _check(chars)
+    # _check(chars)
     to_decode = _join_array(chars)
     chars = _binary_to_list_of_n_bytes(to_decode, 8)
-    _check(chars)
+    # _check(chars)
     chars = _convert_binaries_to_decimal(chars)
-    _check(chars)
+    # _check(chars)
     chars = _get_ascii_from_decimals(chars)
-    _check(chars)
+    # _check(chars)
     to_decode = _join_array(chars)
     return to_decode
 

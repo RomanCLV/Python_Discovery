@@ -17,11 +17,11 @@ def main():
     """
     initial = "ABCDE"
     codex = base64.encode(initial)
-    print(f"\nEncode to   base64: {initial} -> {codex}\n")
+    print(f"\nEncode to   base64: {initial} -> {codex}")
 
     # codex = codex.replace('=', '')
     initial = base64.decode(codex)
-    print(f"\nDecode from base64: {codex} -> {initial}\n")
+    print(f"\nDecode from base64: {codex} -> {initial}")
 
 
 if __name__ == "__main__":
