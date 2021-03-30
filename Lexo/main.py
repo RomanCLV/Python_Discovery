@@ -54,7 +54,7 @@ def main():
     """
     The main function
     """
-    list = convertStringToList("SQF PD")
+    list = convertStringToList("String")
     listASCII = converOnASCII(list)
     listBinary = ASCIIToBinary(listASCII)
     listBinaryFormat = binaryFormat(listBinary)
